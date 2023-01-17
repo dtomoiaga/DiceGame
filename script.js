@@ -76,6 +76,15 @@ function decide(decide) {
   return decide;
 }
 
+//function that adds a timeout to the roll dice button
+function foo(btnRoll) {
+  btnRoll.disabled = true;
+  setTimeout(function () {
+    btnRoll.disabled = false;
+  }, 800);
+}
+
+
 btnRoll.addEventListener('click', function () {
   rollDice(), displayDice(), decide();
 });
